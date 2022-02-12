@@ -51,6 +51,7 @@ Open your browser at "localhost:3000".
 
 ##### MailHog 
 ![item3](https://user-images.githubusercontent.com/48870279/153721944-edd91846-3d22-48b8-93f5-c0dab010c06f.png)
+![item5](https://user-images.githubusercontent.com/48870279/153723089-fc17aa39-787c-452b-a356-9d819f6ccf8f.png)
 
 ###### Send notification to all users
 ![item4](https://user-images.githubusercontent.com/48870279/153721881-f8ed793e-7e77-4b33-8588-b7f54d9540f6.png)
