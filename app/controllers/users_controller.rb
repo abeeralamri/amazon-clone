@@ -25,6 +25,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        
         # User mailer
         UserMailer.with(user: @user).welcome_email.deliver_now
 

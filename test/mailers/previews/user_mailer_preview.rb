@@ -1,8 +1,8 @@
 # Preview all emails at http://localhost:3000/rails/mailers/user_mailer
 class UserMailerPreview < ActionMailer::Preview
-    def new_user
+    def welcome_email
         user = User.last
-        user = User.new(name: user.name.last, email: user.email.last)
-        UserMailer.with(user: user).new_user
+        user = User.new(name: user.name, email: user.email.last)
+        UserMailer.with(user: user).welcome_email
     end
 end
