@@ -6,4 +6,6 @@ class UserMailer < ApplicationMailer
 
       mail(to: @user.email , subject: "Welcome to Amazon, #{@user.name}!")
     end
+
+    
 end

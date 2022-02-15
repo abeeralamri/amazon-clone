@@ -25,9 +25,11 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
-
+        
         # Item mailer
         ItemMailer.with(item: @item).new_item.deliver_now
+        #job
+        ItemsJob.perform_now(@item)
 
         format.html { redirect_to item_url(@item), notice: "Item was successfully created." }
         format.json { render :show, status: :created, location: @item }

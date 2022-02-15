@@ -1,0 +1,18 @@
+ 
+This all users registered today,
+---------------------------------------
+<% @users.each do |u| %>
+
+<%= u.name %>
+<%= u.email %>
+
+<% end %>
+
+This all items added today, 
+---------------------------------------
+<% @items.each do |u| %>
+
+<%= u.title %>
+<%= u.price %>
+
+<% end %>

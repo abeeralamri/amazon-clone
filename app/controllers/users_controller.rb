@@ -28,6 +28,9 @@ class UsersController < ApplicationController
         
         # User mailer
         UserMailer.with(user: @user).welcome_email.deliver_now
+        #job
+        MailJob.perform_now(@user)
+
 
         format.html { redirect_to user_url(@user), notice: "User was successfully created." }
         format.json { render :show, status: :created, location: @user }

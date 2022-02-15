@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+ 
+      <p>This all users registered today, </p>
+      <p>---------------------------------------</p>
+      <% @users.each do |u| %>
+
+        <%= u.name %>
+        <br>
+        <%= u.email %>
+        <br>
+        <br>
+      <% end %>
+
+  <p>This all items added today, </p>
+      <p>---------------------------------------</p>
+      <% @items.each do |u| %>
+
+        <%= u.title %>
+        <br>
+        <%= u.price %>
+        <br>
+        <br>
+      <% end %>
+
+  </body>
+</html>
