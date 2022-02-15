@@ -67,6 +67,11 @@ Open your browser at "localhost:3000".
 
 ![User3](https://user-images.githubusercontent.com/48870279/153722248-ec19f0a8-8a8a-4def-a838-4bab9e9381ff.png)
 
+### Active job
+#### Sending daily summary for an admin
+![activejob1](https://user-images.githubusercontent.com/48870279/154076606-f559fe7a-b6fd-49a6-8599-0c060429e317.png)
+
+![activejob2](https://user-images.githubusercontent.com/48870279/154076613-dff5f3d8-9073-4b7f-a90b-42effe94b081.png)
 
 
 
