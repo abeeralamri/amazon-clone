@@ -1,0 +1,5 @@
+ <% if @item.pics.attached? %>
+    <% @item.pics.each do |item_image| %>
+    <%= image_tag item_image, class: "avatar-medium" %>
+    <% end %>
+<% end %>
