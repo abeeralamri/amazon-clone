@@ -1,0 +1,30 @@
+<p style="color: green"><%= notice %></p>
+
+<strong> Cover </strong>
+
+  <% if @item.cover.attached? %>
+    <p>  
+      <%= image_tag @item.cover , size: "200x200"%>
+    </p>
+      <%= link_to 'Delete', delete_cover_item_path(@item), method: :delete%>
+  <%end%>
+<br>
+<br>
+<br>
+<strong> Upload </strong>
+<% @item.pics.each  do |i| %>
+    <p> 
+      <%= image_tag i, size: "200x200"%>
+      
+    </p>
+    <!-- <%= link_to 'Delete', delete_pic_item_path(), method: :delete%> -->
+<%end%>
+
+
+<%= render @item %>
+<div>
+  <%= link_to "Edit this item", edit_item_path(@item) %> |
+  <%= link_to "Back to items", items_path %>
+  <%= button_to "Destroy this item", @item, method: :delete %>
+   
+
