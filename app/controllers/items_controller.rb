@@ -62,15 +62,15 @@ class ItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  def delete_pic
-    @image = Item.find(params[:id])
-    if @image.pics.count > 1
-      @delete = @image.pics[1].purge
-    else
-      @delete = @image.pics.purge
-    end
-    redirect_to items_url, notice: "Picture was successfully destroyed." 
-  end
+  # def delete_pic
+  #   @image = Item.find(params[:id])
+  #   if @image.pics.count > 1
+  #     @delete = @image.pics[1].purge
+  #   else
+  #     @delete = @image.pics.purge
+  #   end
+  #   redirect_to items_url, notice: "Picture was successfully destroyed." 
+  # end
 
   def delete_cover
     @cover = Item.find(params[:id])
