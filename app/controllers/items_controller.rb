@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: %i[ show edit update destroy ]
+  before_action :set_item, only: %i[ show edit update destroy delete_image_attachment]
 
   # GET /items or /items.json
   def index
@@ -62,6 +62,22 @@ class ItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  def delete_pic
+    @image = Item.find(params[:id])
+    if @image.pics.count > 1
+      @delete = @image.pics[1].purge
+    else
+      @delete = @image.pics.purge
+    end
+    redirect_to items_url, notice: "Picture was successfully destroyed." 
+  end
+
+  def delete_cover
+    @cover = Item.find(params[:id])
+    @cover.cover.purge
+    redirect_to items_url, notice: "Cover was successfully destroyed."
+
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -71,6 +87,6 @@ class ItemsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def item_params
-      params.require(:item).permit(:title, :description, :price)
+      params.require(:item).permit(:title, :description, :price, :cover, pics:[])
     end
 end

@@ -9,7 +9,17 @@
         <% end %>
       </ul>
     </div>
-  <% end %>
+  <% end %>  
+
+  <div> 
+    <%= form.label :cover, style: "display: block" %>
+    <%= form.file_field :cover  %>
+  </div>
+  <div> 
+    <%= form.label :pics, style: "display: block" %>
+    <%= form.file_field :pics , multiple: true %>
+  </div>
+
 
   <div>
     <%= form.label :title, style: "display: block" %>

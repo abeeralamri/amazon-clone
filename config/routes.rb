@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
-  resources :items
+  resources :items do 
+    member do 
+      delete :delete_pic
+      delete :delete_cover
+    end
+  end
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
+  get '/items/:id/delete_pic', to: 'items#delete_pic', as: :DELETE
+  get '/items/:id/delete_cover', to: 'items#delete_cover'
 end
