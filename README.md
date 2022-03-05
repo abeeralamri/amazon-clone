@@ -74,6 +74,10 @@ Open your browser at "localhost:3000".
 ![activejob2](https://user-images.githubusercontent.com/48870279/154076613-dff5f3d8-9073-4b7f-a90b-42effe94b081.png)
 
 
+### User authenticationby using devise
+
+
+![devise](https://user-images.githubusercontent.com/48870279/156883164-0fdacabf-d7ba-4686-89e9-8c5655b939d5.mov)
 
 
 

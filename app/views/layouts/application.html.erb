@@ -1,18 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html >
+<%# dir="rtl" %>
   <head>
-    <title>AmazonClone</title>
+    <title>Amazon Clone</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
   </head>
+<nav class="navbar">
+  <div>
+   <a class="navbar-home" href="/">Home</a>
+  </div>
+   <% if user_signed_in? %>
+    <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: "btn btn-danger"%>
+  <%else%>
+  <div class="buttons">
+    <%= button_to 'Sign up', new_user_registration_path, method: :get, class: "btn btn-dark", style:"margin-right:15px;"%>
+    <%= button_to 'Login', new_user_session_path , class: "btn btn-light" %>
+  </div>
+  <%end%>
+</nav>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <body>   
+  <% if alert %>
+    <p div class="alert alert-danger mt-4" role="alert"><%= alert %></p> 
+  <%end%>
+    <p class="notice"><%= t notice %></p>
     <%= yield %>
+
   </body>
 </html>
